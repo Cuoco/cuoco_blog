@@ -167,7 +167,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -177,7 +177,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -231,7 +231,7 @@
               
                 
                 <a class="post-title-link" href="/2016/07/11/hello-world/" itemprop="url">
-                  Hello Cuoco
+                  亲爱的Cuoco，我们一起来写恋爱笔记吧！
                 </a>
               
             
@@ -243,7 +243,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-07-11T22:33:52+08:00" content="2016-07-11">
               2016-07-11
             </time>
@@ -274,61 +274,30 @@
       
         
           
-            <p><strong>题目</strong>：长度为 n 的数组，里面所有数字都在 [0, n-1] 范围之内。数组中某些数字是重复的，但不知道有几个数字重复，也不知道每个数字重复几次。</p>
-<p><strong>要求</strong>：找出数组中任意一个重复的数字。</p>
-<p><strong>示例</strong>：输入 n = 7 的数组 {2, 3, 1, 0, 2, 5, 3}，则输出 2 或 3。</p>
-<p><a href="http://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8?tpId=13&amp;tqId=11203&amp;rp=2&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">题目链接</a></p>
-<p><strong>思路</strong>：</p>
-<ol>
-<li>哈希表。<ul>
-<li>遍历数组，将其中元素存入哈希表中，如果某个元素已经在哈希表中出现过，则其为重复数字。</li>
-<li>缺点：使用额外存储空间。</li>
-</ul>
-</li>
-<li>变形的排序。<ul>
-<li>如果数组中无重复数字，则排序之后，numbers[i] = i，即数字 i 所在位置的下标也是 i，利用该特性对数组排序。排序过程中，如果某个位置的数字出现多个，该其为重复数字。</li>
-<li>算法：<ul>
-<li>遍历数组，对于每个下标 i 的元素 numbers[i]：<ul>
-<li>判断 numbers[i] 是否等于 i:<ol>
-<li>如果 numbers[i] == i，表明该元素出于排序后的最终位置，处理下一个元素。</li>
-<li>如果 numbers[i] != i，则交换下标 i 和 numbers[i] 两个位置上的元素，交换之后，numbers[i] 处于其最终位置上。</li>
-</ol>
-</li>
-<li>重复判断numbers[i] 是否等于 i，直到 numbers[i] == i。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<p><strong>Java 实现</strong>：</p>
-<pre><code>public class Solution {
-    public boolean duplicate(int[] numbers, int length, int[] duplication) {
-        if (numbers == null || numbers.length &lt;= 1)
-            return false;
-
-        for (int i = 0; i &lt; numbers.length; i++) {
-            while (numbers[i] != i) {
-                if (numbers[i] == numbers[numbers[i]]) {
-                    duplication[0] = numbers[i];
-                    return true;
-                }
-
-                exch(numbers, i, numbers[i]);
-            }
-        }
-
-        return false;
-    }
-
-    private void exch(int[] n, int i, int j) {
-        int tmp = n[i];
-        n[i] = n[j];
-        n[j] = tmp;
-    }
-}
-</code></pre>
+            <blockquote>
+<p><em>I want to find a box, store all the moments that you’ve touched me. When I don’t like you as much, I can take them out and remember.</em></p>
+</blockquote>
+<h2 id="这些都是你给我的爱"><a href="#这些都是你给我的爱" class="headerlink" title="这些都是你给我的爱"></a>这些都是你给我的爱</h2><p>当一切都在渐入佳境的时候，不时会有人来破坏风景。</p>
+<p>事情来的太突然，当我仍然不知所措的时候，我翻看学妹的公众号（虽然被你删除了，可是那天依然能够看到，可惜的是此时此刻并没有内容了），看着一篇篇学妹在我身旁写出来的日记，我努力寻找我存在过的痕迹，还好，我的出镜率很高，很容易找到。</p>
+<p>看着那些傻傻的文字，我们一起经历的美好不断在我眼前闪过。</p>
+<h3 id="送学妹回家"><a href="#送学妹回家" class="headerlink" title="送学妹回家"></a>送学妹回家</h3><p>我想起来了我送你回家的晚上，我记得你脸上害怕的样子，也记得你因为害怕紧紧握住我的手（东苑每个月总有事情发生），你总是取笑我第一次见面之后我拒绝送你回家的理由，还说这就是典型的科大傲娇男，眼睛都长到天上去了，可是你又怎么会知道我送你回家会有多开心。</p>
+<h3 id="长椅上的聊天"><a href="#长椅上的聊天" class="headerlink" title="长椅上的聊天"></a>长椅上的聊天</h3><p>我想起来了我们刚在一起的时候在你家楼下的长椅上聊天，我们从凉爽的春夜聊到了蚊子肆虐的夏夜，我记得旁边那盏橘黄色的灯的角度，你喜欢坐在我的左手边，我们从礼貌的各自坐着到我牵起了你的手再到你依偎在我的肩膀上，回想起来真的很开心啊，你说我全是套路，可是你哪里知道，跟你在一起脑子转的快啊，都是随机应变的反应，哪里有什么套路啊，再到后来，椅子旁边来了一只不速之客，它总喜欢蹭我的腿，我笑它是一只初出茅庐的猎手，因为你一叫它咪咪，它就屁颠的跑过来了，我看着它从练习基本的扑抓到驾轻就熟的在东苑游荡，而它也见证了我们那段时光的夜晚。</p>
+<h3 id="沙河操场的散步"><a href="#沙河操场的散步" class="headerlink" title="沙河操场的散步"></a>沙河操场的散步</h3><p>我想起了我们在沙河操场一起散步，一起聊天，你总是叽叽喳喳说个不停，讲你的故事，讲你的当初来沙河上课时候的艰辛，赶校车，一个人在操场背单词，我可以想象那有多痛苦，可是你都是笑着跟我说的，那时候我已经开始喜欢你啦，可是你什么都不知道。</p>
+<h3 id="主楼前面的宵夜"><a href="#主楼前面的宵夜" class="headerlink" title="主楼前面的宵夜"></a>主楼前面的宵夜</h3><p>我想起来了你在主楼前面陪我吃东西，你笑着说要陪我过毕业季（哈哈，最后的毕业季还真是你陪我过的呢，虽然没有出去玩，但是每天跟你在一起真的很开心），还说想要喝果啤，我还傻乎乎的问你果啤是什么，后来我们在家乐福买到了，味道也还可以啊。你说我是你在沙河第一个很好的朋友，其实那时候我想说，我要做你的男朋友！</p>
+<h3 id="一起改试卷"><a href="#一起改试卷" class="headerlink" title="一起改试卷"></a>一起改试卷</h3><p>我想来了我们一起批改学生作业的那次，你说要改不完了，我的内心是平静的，因为有我在怎么可能改不完呢，然而事实证明你是对的，我们最后被阿姨赶出了图书馆，幸好只有不多的几份了。改试卷的时候，你说有好几个学生真的很努力的在学习，虽然基础不好，可是他们并没有放弃，我笑着说我要给他们打高分，其实我没有放水，可是我批改的卷子里高分好多啊，哈哈哈。</p>
+<h3 id="和学妹一起吃饭"><a href="#和学妹一起吃饭" class="headerlink" title="和学妹一起吃饭"></a>和学妹一起吃饭</h3><p>在一起之前我们每天一起吃饭，我吃饭总是那么快，就像怕别人来抢一样，这是我高中养成的坏习惯，你说要慢慢吃饭，吃块了对身体不好。最开始的一段时间，我总是狼吞虎咽的吃完，然后静静的看着你吃，后来我也学会慢慢吃饭啦，这都是你的功劳啊！</p>
+<h3 id="水碾河的跷脚牛肉，及成都的夜景"><a href="#水碾河的跷脚牛肉，及成都的夜景" class="headerlink" title="水碾河的跷脚牛肉，及成都的夜景"></a>水碾河的跷脚牛肉，及成都的夜景</h3><p>你带我去水碾河那里吃跷脚牛肉，那次我总算知道了你的说走就走，那天下了阵雨，我打完球，身上都是汗，你都不嫌弃我，(<em>^__^</em>) ，那天你跟我说了什么是海椒，还告诉这时南北方称呼的差异。我们还在那边看了夜景，你说你最喜欢那里的夜色，确实特别漂亮，我在桥上牵着你的手，那是我第一次对成都有了归属感，因为有了你，即使距离家乡三千公里，我也不再感到孤单了。你还带我去旁边的巷子转了，你告诉我这就是典型的成都巷子啊，那天我感到非常的幸福，我对自己说，我是积了多大的福气，才找到了你。</p>
+<h3 id="华西同传"><a href="#华西同传" class="headerlink" title="华西同传"></a>华西同传</h3><h4 id="准备的艰辛"><a href="#准备的艰辛" class="headerlink" title="准备的艰辛"></a>准备的艰辛</h4><p>华西的医学同传，那是你的第三个同传case，这次终于下定决心要做了。</p>
+<p>我看过演讲的内容，我当时真的不敢想象你竟然敢去做这个，因为内容专业化程度很高，仅仅看懂PPT都要花费很大功夫。决定要做之后，你每一天准备的样子我都看在心里，我当时想如果这样也做不好这个会，那真的很令人沮丧。你在我的身边，用你的小电脑查资料，看PPT，我还嘲笑你不懂线性回归，为了让你更好理解PPT，我找了几篇论文，我猜着是理科生都会做的吧，可是你满眼星星的看着我的样子，让我既感到开心，又感到心虚。</p>
+<p>真的很心疼这么辛苦做翻译的你，别的女孩都在快乐的玩耍，你却要耗费这么多精力去工作，那时我有些佩服你了。</p>
+<h4 id="完成的快乐"><a href="#完成的快乐" class="headerlink" title="完成的快乐"></a>完成的快乐</h4><p>当然啦，最后的结果是很完美啦，我们在川大见了面，我看见你拖着箱子的样子好心疼，我知道你肯定累坏了，你跟我说超级想吃甜食，我们去了你心心念的咖啡厅，你喜欢里面的短腿小柯基，我看着你开心的发朋友圈的样子，我突然觉得，如果我以后有能力了，一定不让你继续做同传了，因为太辛苦了。</p>
+<p>晚上我们去吃了川大那边的素食餐厅，味道真的很不错，很喜欢，很开心，能遇到你。</p>
+<p>以后我可以吹牛说，我是同传的男朋友啦~~</p>
+<h3 id="尴尬的瑜伽节"><a href="#尴尬的瑜伽节" class="headerlink" title="尴尬的瑜伽节"></a>尴尬的瑜伽节</h3><p>如果你觉得生活顺风顺水的发展，那么恭喜你，因为大部分情况正好相反。</p>
+<p>做完华西同传之后，你马不停蹄的又要去都江堰做一个瑜伽节的翻译，问题是你根本没有时间去准备啊。</p>
+<p>意料之外，情理之中，这次翻译出问题了，在有电视台录像的情况下，你被来听课的学员当场指责了。你跟我打电话说这事，我现在好后悔没有立刻赶过去，因为你都自己一个人哭了，很担心自己的翻译之路是不是要断了，我只是在电话里安慰你，我当时应该立刻马上过去的！好在最后结果还不算太差，可是这让你决定了要做高端翻译。</p>
+<p>我要努力挣钱，这样你就可以不做翻译啦。</p>
+<h3 id="半夜疯狂回清水河"><a href="#半夜疯狂回清水河" class="headerlink" title="半夜疯狂回清水河"></a>半夜疯狂回清水河</h3><h3 id="人民公园喝茶"><a href="#人民公园喝茶" class="headerlink" title="人民公园喝茶"></a>人民公园喝茶</h3><h3 id="第三者"><a href="#第三者" class="headerlink" title="第三者"></a>第三者</h3><h3 id="老麻抄手与红油水饺"><a href="#老麻抄手与红油水饺" class="headerlink" title="老麻抄手与红油水饺"></a>老麻抄手与红油水饺</h3><h3 id="替我揉揉腿"><a href="#替我揉揉腿" class="headerlink" title="替我揉揉腿"></a>替我揉揉腿</h3><h3 id="送到男生宿舍的姜汤和水果"><a href="#送到男生宿舍的姜汤和水果" class="headerlink" title="送到男生宿舍的姜汤和水果"></a>送到男生宿舍的姜汤和水果</h3><h3 id="网球场拍照"><a href="#网球场拍照" class="headerlink" title="网球场拍照"></a>网球场拍照</h3><h3 id="温江带来的凉面"><a href="#温江带来的凉面" class="headerlink" title="温江带来的凉面"></a>温江带来的凉面</h3><h3 id="北京爷爷"><a href="#北京爷爷" class="headerlink" title="北京爷爷"></a>北京爷爷</h3><h3 id="前任"><a href="#前任" class="headerlink" title="前任"></a>前任</h3><h3 id="哈哈和龙猫"><a href="#哈哈和龙猫" class="headerlink" title="哈哈和龙猫"></a>哈哈和龙猫</h3><h3 id="你是中央空调吗"><a href="#你是中央空调吗" class="headerlink" title="你是中央空调吗"></a>你是中央空调吗</h3><h3 id="如果你有黑历史，请不要告诉我"><a href="#如果你有黑历史，请不要告诉我" class="headerlink" title="如果你有黑历史，请不要告诉我"></a>如果你有黑历史，请不要告诉我</h3><h2 id="你答应我要做的事"><a href="#你答应我要做的事" class="headerlink" title="你答应我要做的事"></a>你答应我要做的事</h2><h2 id="我想和你继续写下去"><a href="#我想和你继续写下去" class="headerlink" title="我想和你继续写下去"></a>我想和你继续写下去</h2>
           
         
       
@@ -398,7 +367,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -445,7 +414,7 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
